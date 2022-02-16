@@ -1,0 +1,419 @@
+  body:not(.sqs-edit-mode-active) .onlyInEditMode,
+  body:not(.sqs-edit-mode-active) .searchFilterHelperText {
+    display: none;
+  }
+  body.sqs-edit-mode-active .search-filter-outer {
+    display: block !important;
+  }
+  body:not(.sqs-edit-mode-active) .search-input-section {
+    height: 0 !important;
+    overflow: hidden !important;
+    min-height: 0 !important;
+  }
+  body:not(.sqs-edit-mode-active) .search-input-section #advanced_search_input {
+    display: none;
+  }
+  body:not(.sqs-edit-mode-active) .search-filter-outer.stickySideFilter {
+    position: fixed;
+    z-index: 9999;
+  }
+  body:not(.sqs-edit-mode-active) .mobileFilterButton.stickySideFilter {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    padding: 20px 0;
+  }
+  .filter-text .filterContainerTotal {
+    margin-left: 5px;
+  }
+  .filter-text.open .filterContainerTotal {
+    display: none;
+  }
+  .topBarCon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .filterItems {
+    margin-left: 5px;
+  }
+  ul.nested-category-children {
+    display: none !important;
+  }
+  .active-filter-ind {
+    font-size: 12px;
+    margin-left: 5px;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 27px;
+    padding: 2px 10px;
+    font-weight: 500;
+    height: 21px;
+    white-space: nowrap;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .filterAndSort {
+    display: none;
+  }
+  .mobileFilterButton {
+    background: #000000;
+    color: #ffffff;
+    padding: 2%;
+    text-align: center;
+    font-weight: 600;
+  }
+  .fa.fa-filter {
+    margin-right: 10px;
+  }
+  .mobileFilterButton:hover {
+    cursor: pointer;
+  }
+  .filterAndClose {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border-top: 1px solid #a3a3a3;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 15px;
+  }
+  .filterCloseTrigger {
+    display: flex;
+  }
+  .clearAll {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    max-height: 40px;
+    text-decoration: underline;
+    margin-left: 20px;
+    font-weight: normal;
+    background: transparent;
+    color: #000000;
+    border: none;
+  }
+  .activeFilterCon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .activeFilterCon.mobileFilters {
+    display: none;
+  }
+  .activeFilterCon.desktopFilters {
+    margin-bottom: 15px;
+  }
+  .activeFilterCon.desktopFilters .clearAll {
+    display: none !important;
+  }
+  .mobileButtonContainers {
+    display: none;
+  }
+  @media(max-width:800px) {
+    .activeFilterCon.mobileFilters {
+      display: flex;
+    }
+    .activeFilterCon.desktopFilters {
+      display: none;
+    }
+    .activeFilterCon {
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+    .filterByText .clearAll {
+      display: none;
+    }
+    .filter-container {
+      max-height: 65%;
+      overflow-y: scroll;
+    }
+    .mobileButtonContainers {
+      display: flex;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: end;
+    }
+    .mobileButtonContainers .applyFilters {
+      background: #000000;
+      color: #ffffff;
+      padding: 2%;
+      text-align: center;
+      font-weight: 600;
+      min-width: 200px;
+    }
+    .applyFilters.disabled {
+      opacity: .3;
+    }
+    .mobileButtonContainers .applyFilters:not(.disabled):hover {
+      cursor: pointer;
+    }
+    .filterAndSort {
+      display: block;
+    }
+    .topBarCon {
+      margin-top: 30px;
+    }
+  }
+  .active-filter-ind:after {
+    content: '\00d7';
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .tweak-products-category-title .products.collection-content-wrapper .nested-category-title.nested-category-title-padding::after {
+    display: none !important;
+  }
+  .nested-category-tree-wrapper ul {
+    margin-bottom: 10px !important;
+  }
+  .search-filter-outer {
+    padding-top: 30px;
+    min-width: 236px;
+  }
+  .filterByText {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 40px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+  }
+  .filterByText .fa-times:before {
+    font-size: 30px;
+  } 
+  .filterByText .fa-times {
+    margin-right: 10px;
+    display: none;
+  }
+  .tags-container {
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+  .sortPrice {
+    padding: 5px 10px;
+  }
+
+  @media(max-width: 800px) {
+    .filterAndSort {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column-gap: 5px;
+    }
+    .sortPrice.desktop {
+      display: none;
+    }
+    .sortPrice.mobile {
+      padding: 10px 10px;
+    }
+    .filterByText .fa-times {
+      display: block;
+    }
+    .search-filter-outer {
+      display: none;
+      position: fixed;
+      z-index: 999999;
+      background: #ffffff;
+      color: #000000;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      max-height: 100%;
+      top: 0;
+      left: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .sortPrice.mobile, .mobileFilterButton {
+      width: 50%;
+    }
+  }
+  .filterAndClose:last-child {
+    border-bottom: 1px solid #a3a3a3;
+  }
+  .filter-text {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .tags-container .select-label {
+    margin: 5px 15px 5px 0px !important;
+    display: flex;
+    align-items: center;
+  }
+  .tags-container input[type='checkbox'] {
+    margin-right: 5px;
+  }
+  .tags-container .tag-button:hover {
+    transition: all .3s;
+    transform: scale(1.05);
+    box-shadow: 0px 11px 19px -18px #000000;
+  }
+  .tags-container .tag-button.active {
+    border-color: lightcoral;
+    box-shadow: 0px 11px 19px -18px #000000;
+  }
+  .filter-text .fa.fa-angle-down {
+    margin-left: 10px;
+    transform: rotate(0deg);
+    transition: all .3s;
+    margin-right: 10px;
+  }
+  .filter-text .fa.fa-angle-down:before {
+    font-weight: 500;
+    font-size: 35px;
+  }
+  .filterAndClose,
+  .active-filter-ind,
+  .clearAll {
+    cursor: pointer;
+  }
+  .filter-text {
+    font-weight: 600;
+  }
+  .filter-text.open .fa.fa-angle-down {
+    transform: rotate(180deg);
+    transition: all .45s;
+  }
+  .tags-container .tag-button:after {
+    font-size: 30px;
+    content: '\00d7';
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  .tags-container .tag-button.active:after {
+    opacity: 1;
+    transition: opacity .5s;
+  }
+  .tags-container .select-label:first-child {
+    margin-left: 0 !important;
+  }
+  @media(max-width: 768px) {
+    .products.collection-content-wrapper .nested-category-tree-wrapper {
+      display: block;
+      float: none;
+      margin-top: 40px;
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .select-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .select-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+    left: 0;
+  }
+
+  .select-label input.focus-visible ~ .checkmark {
+    outline-color: #000000;
+    outline-width: 2px;
+    outline-offset: 4px;
+    outline-style: solid;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .select-label:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .select-label input:checked ~ .checkmark {
+    background-color: #787878;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .select-label input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .select-label .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* Color-theme compatability */
+  .dark .active-filter-ind,
+  .dark-bold .active-filter-ind,
+  .black .active-filter-ind,
+  .black-bold .active-filter-ind {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  .dark .select-label input.focus-visible ~ .checkmark,
+  .dark-bold .select-label input.focus-visible ~ .checkmark,
+  .black .select-label input.focus-visible ~ .checkmark,
+  .black-bold .select-label input.focus-visible ~ .checkmark {
+    outline-color: #ffffff;
+  }
+
+  .white .clearAll,
+  .white-bold .clearAll,
+  .light .clearAll,
+  .light-bold .clearAll {
+    color: #000000;
+  }
+
+  .dark .clearAll,
+  .dark-bold .clearAll,
+  .black .clearAll,
+  .black-bold .clearAll {
+    color: #ffffff;
+  }
+  /* Color-theme compatability */
